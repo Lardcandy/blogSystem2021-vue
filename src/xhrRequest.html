@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+</head>
+	
+<body>
+	<button width="100px" height="40px" onclick="jqOpenLink('weixin://dl/business/?t=3ioJm1VjYfn')">点击跳转</button>
+</body>
+<script type="text/javascript">
+let openLink = function(url) {
+	console.log(url)
+	// console.log(typeOf(url))
+    let req = new XMLHttpRequest()
+    req.open("GET", url, true)
+    req.send()
+    req.onreadystatechange = function() {
+        console.log(req.readyState)
+        console.log(req.status)
+    }
+}
+let jqOpenLink = function(url) {
+	$.ajax({
+		type: "GET",
+		url: url,
+		dataType: "jsonp",
+		success: function(data) {
+			console.log(data)
+		},
+		error: function(e) {
+			let info = `error:${e}\n status:${e.status}\n readyState:${e.readyState}\n statusText:${e.statusText}`
+			alert(info)
+
+			console.log("error  ",e)
+			console.log("status ",e.status)
+			console.log("readyState ",e.readyState)
+			console.log("statusCode ",e.statusCode)
+			console.log("statusText ",e.statusText)
+		}
+	})
+}
+</script>
+
+</html>

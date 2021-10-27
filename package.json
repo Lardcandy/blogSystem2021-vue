@@ -1,0 +1,61 @@
+{
+  "name": "vueclidemo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "cos-js-sdk-v5": "^0.5.23",
+    "crypto-js": "^4.0.0",
+    "element-ui": "^2.13.0",
+    "github-markdown-css": "^4.0.0",
+    "highlight.js": "^9.18.1",
+    "markdown-it": "^10.0.0",
+    "markdown-loader": "^5.1.0",
+    "marked": "^0.8.0",
+    "mavon-editor": "^2.7.7",
+    "node-rsa": "^1.0.7",
+    "qiniu-js": "^2.5.5",
+    "uuid": "^7.0.2",
+    "vue": "^2.6.11",
+    "vue-axios": "^2.1.5",
+    "vue-cookies": "^1.7.0",
+    "vue-markdown": "^2.2.4",
+    "vue-router": "^3.1.5",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "compression-webpack-plugin": "^5.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "koa2-cors": "^2.0.6",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
